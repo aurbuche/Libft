@@ -1,35 +1,28 @@
 /* ************************************************************************** */
 /*                                                          LE - /            */
 /*                                                              /             */
-/*   ft_substr.c                                      .::    .:/ .      .::   */
+/*   ft_strscpy.c                                     .::    .:/ .      .::   */
 /*                                                 +:+:+   +:    +:  +:+:+    */
 /*   By: aurbuche <aurbuche@student.le-101.fr>      +:+   +:    +:    +:+     */
 /*                                                 #+#   #+    #+    #+#      */
-/*   Created: 2019/10/10 10:34:26 by aurbuche     #+#   ##    ##    #+#       */
-/*   Updated: 2020/01/08 10:10:28 by aurbuche    ###    #+. /#+    ###.fr     */
+/*   Created: 2019/11/21 13:12:54 by aurbuche     #+#   ##    ##    #+#       */
+/*   Updated: 2020/01/08 10:07:50 by aurbuche    ###    #+. /#+    ###.fr     */
 /*                                                         /                  */
 /*                                                        /                   */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char	*ft_substr(char const *s, unsigned int start, size_t len)
+char		*ft_strscpy(char *dest, const char *src, size_t s, size_t e)
 {
-	char		*dst;
-	size_t		i;
+	int i;
 
 	i = 0;
-	if (start > ft_strlen(s))
-		len = 0;
-	if (len > ft_strlen(s + start))
-		len = ft_strlen(s + start);
-	if (!(dst = malloc(sizeof(char) * (len + 1))))
-		return (NULL);
-	while (i != len)
+	while (s <= e)
 	{
-		dst[i] = s[i + len];
+		dest[i] = src[i];
 		i++;
 	}
-	dst[i] = '\0';
-	return (dst);
+	dest[i] = '\0';
+	return (dest);
 }
