@@ -6,7 +6,7 @@
 /*   By: aurelienbucher <aurelienbucher@student.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/12/03 10:30:24 by aurelienbuc       #+#    #+#             */
-/*   Updated: 2020/03/23 15:30:37 by aurelienbuc      ###   ########lyon.fr   */
+/*   Updated: 2020/03/24 12:51:17 by aurelienbuc      ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,7 +21,7 @@
 # include <stdarg.h>
 # include <unistd.h>
 # include <stdio.h>
-# include "../../include/libft.h"
+# include "libft.h"
 
 /*
 ** -------------------------- Structure Definition ---------------------------

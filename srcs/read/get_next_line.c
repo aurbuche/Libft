@@ -1,17 +1,20 @@
 /* ************************************************************************** */
-/*                                                          LE - /            */
-/*                                                              /             */
-/*   get_next_line.c                                  .::    .:/ .      .::   */
-/*                                                 +:+:+   +:    +:  +:+:+    */
-/*   By: aurbuche <aurbuche@student.le-101.fr>      +:+   +:    +:    +:+     */
-/*                                                 #+#   #+    #+    #+#      */
-/*   Created: 2019/11/11 16:22:31 by aurbuche     #+#   ##    ##    #+#       */
-/*   Updated: 2019/11/18 17:12:39 by aurbuche    ###    #+. /#+    ###.fr     */
-/*                                                         /                  */
-/*                                                        /                   */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   get_next_line.c                                    :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: aurelienbucher <aurelienbucher@student.    +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2019/11/11 16:22:31 by aurbuche          #+#    #+#             */
+/*   Updated: 2020/03/23 15:12:03 by aurelienbuc      ###   ########lyon.fr   */
+/*                                                                            */
 /* ************************************************************************** */
 
-#include "get_next_line.h"
+#ifndef BUFFER_SIZE
+# define BUFFER_SIZE 8
+#endif
+
+#include "../../include/libft.h"
 
 int				ft_check_error(int fd, char **str, char **line)
 {
