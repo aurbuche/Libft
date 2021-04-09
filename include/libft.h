@@ -16,6 +16,8 @@
 # include <stdlib.h>
 # include <unistd.h>
 # include <stdio.h>
+# include <limits.h>
+# define STR_INT_MIN "-2147483648"
 
 int			ft_atoi(const char *str);
 int			ft_isalnum(int c);
@@ -59,6 +61,7 @@ void		ft_putnbr_fd(int n, int fd);
 void		ft_putnbr(int n);
 void		ft_putstr_fd(char *s, int fd);
 void		ft_putstr(char *s);
+void		*ft_malloc(size_t size);
 void		*ft_memchr(const void *s, int c, size_t n);
 void		*ft_memccpy(void *dst, const void *src, int c, size_t n);
 void		*ft_memcpy(void *dst, const void *src, size_t n);

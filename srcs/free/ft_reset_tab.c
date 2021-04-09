@@ -1,22 +1,25 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_calloc.c                                        :+:      :+:    :+:   */
+/*   ft_reset_tab.c                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: aurbuche <aurbuche@student.le-101.fr>      +#+  +:+       +#+        */
+/*   By: user42 <user42@student.42lyon.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2019/10/09 17:33:28 by aurbuche          #+#    #+#             */
-/*   Updated: 2020/03/10 14:46:28 by aurbuche         ###   ########lyon.fr   */
+/*   Created: 2020/08/13 09:54:33 by user42            #+#    #+#             */
+/*   Updated: 2020/10/06 11:26:54 by user42           ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
+#include "../../include/libft.h"
 
-void	*ft_calloc(size_t count, size_t size)
+void		ft_reset_tab(int *tab, int end)
 {
-	void	*ptr;
+	int		i;
 
-	ptr = ft_malloc(size * count);
-	ft_bzero(ptr, count * size);
-	return (ptr);
+	i = 0;
+	while (i < end)
+	{
+		tab[i] = 0;
+		i++;
+	}
 }

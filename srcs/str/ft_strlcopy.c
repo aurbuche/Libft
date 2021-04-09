@@ -1,26 +1,29 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strdup.c                                        :+:      :+:    :+:   */
+/*   ft_strlcopy.c                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: aurbuche <aurbuche@student.le-101.fr>      +#+  +:+       +#+        */
+/*   By: user42 <user42@student.42lyon.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2019/10/09 17:47:51 by aurbuche          #+#    #+#             */
-/*   Updated: 2020/03/10 14:48:09 by aurbuche         ###   ########lyon.fr   */
+/*   Created: 2020/06/08 20:44:34 by aurelienbuc       #+#    #+#             */
+/*   Updated: 2020/10/06 11:28:33 by user42           ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
+#include "../../include/libft.h"
 
-char	*ft_strdup(const char *s1)
+char	*ft_strlcopy(char *dst, const char *src, size_t dstsize)
 {
-	char		*dst;
-	size_t		i;
-	size_t		len;
+	unsigned int	i;
 
 	i = 0;
-	len = ft_strlen(s1);
-	dst = (char *)ft_calloc(sizeof(char), len + 1);
-	ft_memcpy(dst, s1, len);
+	if (dstsize == 0)
+		return (NULL);
+	while (src[i] != '\0' && i < dstsize - 1)
+	{
+		dst[i] = src[i];
+		i++;
+	}
+	dst[i] = '\0';
 	return (dst);
 }

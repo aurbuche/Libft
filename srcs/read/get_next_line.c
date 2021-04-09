@@ -16,7 +16,7 @@
 # define BUFFER_SIZE 8
 #endif
 
-int	ft_check_error(int fd, char **str, char **line)
+int	ft_check_error(int fd, char **str)
 {
 	if (fd < 0 || BUFFER_SIZE < 1)
 	{
@@ -102,10 +102,9 @@ int	ft_complete(char **str, char **line)
 int	get_next_line(int fd, char **line)
 {
 	static char		*str = NULL;
-	int				i;
 
 	*line = NULL;
-	if (ft_check_error(fd, &str, line) == -1)
+	if (ft_check_error(fd, &str) == -1)
 		return (-1);
 	str = ft_read(str, fd);
 	if (ft_complete(&str, line) == 0)

@@ -1,22 +1,24 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_calloc.c                                        :+:      :+:    :+:   */
+/*   ft_free_tab.c                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: aurbuche <aurbuche@student.le-101.fr>      +#+  +:+       +#+        */
+/*   By: user42 <user42@student.42lyon.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2019/10/09 17:33:28 by aurbuche          #+#    #+#             */
-/*   Updated: 2020/03/10 14:46:28 by aurbuche         ###   ########lyon.fr   */
+/*   Created: 2020/07/15 09:23:03 by aurelienbuc       #+#    #+#             */
+/*   Updated: 2020/08/10 17:38:35 by user42           ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
+#include "../../include/libft.h"
 
-void	*ft_calloc(size_t count, size_t size)
+char		**ft_free_tab(char **tab)
 {
-	void	*ptr;
+	int i;
 
-	ptr = ft_malloc(size * count);
-	ft_bzero(ptr, count * size);
-	return (ptr);
+	i = 0;
+	while (tab[i++])
+		free(tab[i]);
+	free(tab);
+	return (NULL);
 }
