@@ -6,19 +6,18 @@
 /*   By: user42 <user42@student.42lyon.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/07/15 09:23:03 by aurelienbuc       #+#    #+#             */
-/*   Updated: 2020/08/10 17:38:35 by user42           ###   ########lyon.fr   */
+/*   Updated: 2021/04/09 16:21:46 by aurbuche         ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../../include/libft.h"
 
-char		**ft_free_tab(char **tab)
+void	ft_freetab(char **tab)
 {
-	int i;
+	int	i;
 
 	i = 0;
-	while (tab[i++])
-		free(tab[i]);
+	while (tab[i] != NULL)
+		ft_delete(&tab[i++]);
 	free(tab);
-	return (NULL);
 }

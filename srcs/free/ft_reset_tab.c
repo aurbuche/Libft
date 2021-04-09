@@ -12,9 +12,9 @@
 
 #include "../../include/libft.h"
 
-void		ft_reset_tab(int *tab, int end)
+void	ft_reset_tab(int *tab, int end)
 {
-	int		i;
+	int	i;
 
 	i = 0;
 	while (i < end)

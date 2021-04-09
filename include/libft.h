@@ -61,6 +61,7 @@ void		ft_putnbr_fd(int n, int fd);
 void		ft_putnbr(int n);
 void		ft_putstr_fd(char *s, int fd);
 void		ft_putstr(char *s);
+void		ft_freetab(char **tab);
 void		*ft_malloc(size_t size);
 void		*ft_memchr(const void *s, int c, size_t n);
 void		*ft_memccpy(void *dst, const void *src, int c, size_t n);
