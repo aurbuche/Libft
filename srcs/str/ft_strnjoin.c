@@ -24,7 +24,8 @@ char	*ft_strnjoin(char *s1, char const *s2, size_t len)
 		return (NULL);
 	if ((ls1 + ls2) < len)
 		len = ls2 + 1;
-	if (!(str = (char *)malloc(sizeof(char) * (len + 1))))
+	str = (char *)ft_malloc(sizeof(char) * (len + 1));
+	if (!str)
 		return (NULL);
 	str = ft_strncpy(str, s1, len);
 	str = ft_strcat(str, s2);

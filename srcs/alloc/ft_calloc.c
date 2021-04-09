@@ -14,18 +14,9 @@
 
 void	*ft_calloc(size_t count, size_t size)
 {
-	void			*ptr;
-	unsigned char	*d;
+	void	*ptr;
 
-	if (!(ptr = malloc(size * count)))
-		return (NULL);
-	d = ptr;
-	count *= size;
-	while (count)
-	{
-		*d = 0;
-		d++;
-		count--;
-	}
+	ptr = ft_malloc(size * nb);
+	ft_bzero(ptr, nb * size);
 	return (ptr);
 }

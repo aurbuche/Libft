@@ -12,40 +12,31 @@
 
 #include "libft.h"
 
-static void		ft_isn(int *n, int *sign)
+char	*ft_itoa(int n)
 {
-	if (*n < 0)
-	{
-		*sign = 1;
-		*n = -*n;
-	}
-}
+	static char	buf[12] = {0};
+	int			i;
+	int			neg;
 
-char			*ft_itoa(int n)
-{
-	int		tmp;
-	int		sign;
-	int		len;
-	char	*str;
-
-	sign = 0;
-	tmp = n;
-	len = 2;
-	if (n == -2147483648)
-		return (ft_strdup("-2147483648"));
-	ft_isn(&n, &sign);
-	while (tmp /= 10)
-		len++;
-	len = len + sign;
-	if (!(str = (char*)malloc(sizeof(char) * len)))
-		return (NULL);
-	str[--len] = '\0';
-	while (len--)
+	i = 10;
+	neg = 1;
+	if (n == INT_MIN)
+		return (ft_strdup(STR_INT_MIN));
+	if (n < 0)
 	{
-		str[len] = n % 10 + '0';
-		n = n / 10;
+		neg = -1;
+		n = -n;
 	}
-	if (sign)
-		str[0] = '-';
-	return (str);
+	while (1)
+	{
+		buf[i--] = n % 10 + '0';
+		n /= 10;
+		if (n == 0)
+			break ;
+	}
+	if (neg == -1)
+		buf[i] = '-';
+	if (neg == -1)
+		return (ft_strdup(buf + i));
+	return (ft_strdup(buf + 1 + i));
 }

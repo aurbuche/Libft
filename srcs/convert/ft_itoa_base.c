@@ -12,7 +12,7 @@
 
 #include "libft.h"
 
-char		*ft_itoa_base(unsigned int n, char *base)
+char	*ft_itoa_base(unsigned int n, char *base)
 {
 	static char	buf[12];
 	int			i;

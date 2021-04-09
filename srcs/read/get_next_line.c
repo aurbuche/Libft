@@ -10,13 +10,13 @@
 /*                                                                            */
 /* ************************************************************************** */
 
+#include "../../include/libft.h"
+
 #ifndef BUFFER_SIZE
 # define BUFFER_SIZE 8
 #endif
 
-#include "../../include/libft.h"
-
-int				ft_check_error(int fd, char **str, char **line)
+int	ft_check_error(int fd, char **str, char **line)
 {
 	if (fd < 0 || BUFFER_SIZE < 1)
 	{
@@ -35,7 +35,7 @@ int				ft_check_error(int fd, char **str, char **line)
 	return (0);
 }
 
-static char		*ft_read(char *str, int fd)
+static char	*ft_read(char *str, int fd)
 {
 	char	*buff;
 	char	*tmp;
@@ -55,7 +55,7 @@ static char		*ft_read(char *str, int fd)
 	return (str);
 }
 
-int				ft_nb_line(char *str)
+int	ft_nb_line(char *str)
 {
 	int		n;
 	int		i;
@@ -71,10 +71,10 @@ int				ft_nb_line(char *str)
 	return (n);
 }
 
-int				ft_complete(char **str, char **line)
+int	ft_complete(char **str, char **line)
 {
-	size_t i;
-	char *tmp;
+	size_t	i;
+	char	*tmp;
 
 	i = 0;
 	while (*str && *str[i])
@@ -99,7 +99,7 @@ int				ft_complete(char **str, char **line)
 	return (0);
 }
 
-int				get_next_line(int fd, char **line)
+int	get_next_line(int fd, char **line)
 {
 	static char		*str = NULL;
 	int				i;

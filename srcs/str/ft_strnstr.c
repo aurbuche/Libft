@@ -16,11 +16,11 @@ char	*ft_strnstr(const char *haystack, const char *neddle, size_t len)
 {
 	int	i;
 	int	j;
-	int k;
+	int	k;
 
 	i = 0;
 	if (neddle[0] == '\0')
-		return ((char*)haystack);
+		return ((char *)haystack);
 	while (haystack[i] != '\0' && len > 0)
 	{
 		j = 0;
@@ -28,7 +28,7 @@ char	*ft_strnstr(const char *haystack, const char *neddle, size_t len)
 		while (haystack[i + j] == neddle[j] && k > 0)
 		{
 			if (neddle[j + 1] == '\0')
-				return ((char*)haystack + i);
+				return ((char *)haystack + i);
 			j++;
 			k--;
 		}

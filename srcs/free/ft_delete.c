@@ -12,7 +12,7 @@
 
 #include "libft.h"
 
-void		ft_delete(char **ptr)
+void	ft_delete(char **ptr)
 {
 	if (!ptr)
 		return ;

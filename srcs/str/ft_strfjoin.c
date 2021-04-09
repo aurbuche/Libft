@@ -12,11 +12,12 @@
 
 #include "libft.h"
 
-char			*ft_strfjoin(char *s1, char *s2, int free)
+char	*ft_strfjoin(char *s1, char *s2, int free)
 {
 	char	*str;
 
-	if (!(str = ft_strjoin(s1, s2)))
+	str = ft_strjoin(s1, s2);
+	if (!str)
 		return (0);
 	if (free == 1)
 		ft_delete(&s1);

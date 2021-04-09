@@ -14,7 +14,7 @@
 
 void	ft_putendl(char *s)
 {
-	int i;
+	int	i;
 
 	i = 0;
 	while (s[i])
