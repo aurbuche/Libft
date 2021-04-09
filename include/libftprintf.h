@@ -27,7 +27,7 @@
 ** -------------------------- Structure Definition ---------------------------
 */
 
-typedef struct	s_option
+typedef struct s_option
 {
 	char			*buffer;
 	char			*rprint;
